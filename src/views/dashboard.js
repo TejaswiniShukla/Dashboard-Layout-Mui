@@ -19,6 +19,7 @@ import CreditCardIcon from "@mui/icons-material/CreditCard";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
+import MyChart from "../components/barChart";
 //for shifting content from header
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -97,12 +98,15 @@ function DashBoard() {
           <Box height={20} />
           <Grid container spacing={2}>
             <Grid item xs={8}>
-              <Card sx={{ height: 60 + "vh" }}>
-                <CardContent></CardContent>
+              <Card sx={{ minHeight: 60 + "vh" }}>
+                <CardContent>
+                  <MyChart/>
+                  <MyChart/>
+                </CardContent>
               </Card>
             </Grid>
             <Grid item xs={4}>
-              <Card sx={{ height: 60 + "vh" }}>
+              <Card sx={{ minHeight: 60 + "vh" }}>
                 <CardContent>
                   <Accordion>
                     <AccordionSummary
